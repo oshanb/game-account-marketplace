@@ -36,3 +36,74 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Architecture
+
+``` mermaid
+---
+title: Class Diagram
+--- 
+
+classDiagram
+    User "1" -- "n" Listing
+    Listing "1" -- "1" Game
+    Listing "1" -- "n" Vote
+    Listing "1" -- "n" Interests
+
+    class User {
+        -String id
+        -String email
+        -String password
+        -String firstName
+        -String lastName
+        -String profilePic
+        -Enum role [ADMIN, USER]
+        -Enum status [ACTIVE, INACTIVE]
+        -Ref Listing[] listings
+        -Date createdTime
+        -Date lastAuth
+    }
+
+    class Listing {
+        -String id
+        -String title
+        -String description
+        -String images[]
+        -Number price
+        -String rank
+        -Enum status [ACTIVE, INACTIVE]
+        -Ref User user
+        -Ref Game game
+        -Ref Vote[] votes
+        -Ref Interests[] interests
+        -Date createdTime
+        -Date lastModified
+    }
+
+    class Game {
+        -String id
+        -String title
+        -String description
+        -String image
+        -Enum status [ACTIVE, INACTIVE]
+        -Date createdTime
+        -Date lastModified
+    }
+
+    class Vote {
+        -String id
+        -String vote
+        -Ref User user
+        -Ref Listing listing
+        -Date createdTime
+    }
+
+    class Interests {
+        -String id
+        -String interest
+        -Ref User user
+        -Ref Listing listing
+        -Date createdTime
+    }
+
+```
