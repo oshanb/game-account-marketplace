@@ -37,10 +37,10 @@ const Slider = () => {
                     <div className="row gx-5 align-items-center">
                         <div className="col-lg-8 mb-sm-30">
                             <div className="subtitle blink mb-4">Servers Are Available</div>
-                            <h1 className="slider-title text-uppercase mb-1">Galactic Odyssey</h1>
+                            <h1 className="slider-title text-uppercase mb-1">Gamer Acoount Marketplace</h1>
                         </div>
                         <div className="col-lg-6">
-                            <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p>
+                            <p className="slider-text">Freefire Marketplace</p>
                             <div className="sw-price wp">
                                 <div className="d-starting">
                                     Starting at
@@ -71,7 +71,7 @@ const Slider = () => {
                     <div className="row gx-5 align-items-center">
                         <div className="col-lg-8 mb-sm-30">
                             <div className="subtitle blink mb-4">Servers Are Available</div>
-                            <h1 className="slider-title text-uppercase mb-1">Mystic Racing</h1>
+                            <h1 className="slider-title text-uppercase mb-1">FreeFire Game Marketplace</h1>
                         </div>
                         <div className="col-lg-6">
                             <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p>
